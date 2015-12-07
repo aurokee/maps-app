@@ -54,6 +54,7 @@ public class MapsActivity extends FragmentActivity {
         }
     }
 
+
     /**
      * This is where we can add markers or lines, add listeners or move the camera. In this case, we
      * just add a marker near Africa.
@@ -61,7 +62,7 @@ public class MapsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 36)).title("Marker"));
+        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 36)).title("City")).setIcon(R.drawable._____);
 
 
 
