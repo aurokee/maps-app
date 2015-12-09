@@ -6,12 +6,23 @@ import android.os.Bundle;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity {
+    Marker correctCity;
+    Marker tokyo;
+    Marker hongkong;
+    Marker northpole;
+    Marker london;
+    Marker rome;
+    public void setCorrectcity(Marker correctcity) {
+    }
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +73,34 @@ public class MapsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 36)).title("City")).setIcon(R.drawable._____);
+        tokyo = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(0, 36))
+                .title("tokyo")
+                .snippet("A place with a lot of sushi!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.sushi)));
+        hongkong = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(60, 130))
+                .title("hongkong")
+                .snippet("A city with octopus cards!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.octopuscard)));
+        northpole = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(65, -145))
+                .title("northpole")
+                .snippet("Where Santa lives!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.northpolealaska)));
+        london = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(50, -7))
+                .title("london")
+                .snippet("The queen lives here!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.buckinghampalace)));
+        rome = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(38, 15))
+                .title("rome")
+                .snippet("The city of seven hills!")
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.rome)));
+
+
+
 
 
 
