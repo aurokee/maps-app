@@ -18,14 +18,14 @@ public class MapsActivity extends FragmentActivity {
     Marker northpole;
     Marker london;
     Marker rome;
-    public void setCorrectcity(Marker correctcity) {
+    public void setCorrectCity(Marker correctCity) {
     }
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
